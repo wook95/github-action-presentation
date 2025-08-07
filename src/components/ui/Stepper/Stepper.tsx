@@ -226,7 +226,7 @@ interface StepProps {
   children: ReactNode;
 }
 
-export function Step({ children }: StepProps): JSX.Element {
+export function Step({ children }: StepProps): React.ReactElement {
   return <div className="step-default">{children}</div>;
 }
 
