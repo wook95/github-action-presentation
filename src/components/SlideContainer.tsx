@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { Slide } from '@/types/slide';
+import type { Slide } from "@/types/slide";
 
 interface SlideContainerProps {
   slide: Slide;
@@ -17,13 +17,13 @@ export function SlideContainer({
   totalSlides,
   onNext,
   onPrev,
-  onHome
+  onHome,
 }: SlideContainerProps) {
   const handleClick = (event: React.MouseEvent) => {
     const rect = event.currentTarget.getBoundingClientRect();
     const clickX = event.clientX - rect.left;
     const width = rect.width;
-    
+
     // 왼쪽 30% 클릭시 이전 슬라이드, 오른쪽 70% 클릭시 다음 슬라이드
     if (clickX < width * 0.3) {
       onPrev();
@@ -33,13 +33,16 @@ export function SlideContainer({
   };
 
   return (
-    <div 
+    // biome-ignore lint/a11y/noStaticElementInteractions: 클릭 이벤트 처리를 위해 필요
+    // biome-ignore lint/a11y/useKeyWithClickEvents: 클릭 이벤트 처리를 위해 필요
+    <div
       className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white flex flex-col cursor-pointer select-none"
       onClick={handleClick}
     >
       {/* Navigation Bar */}
       <div className="fixed top-4 right-4 z-10 flex items-center gap-4 bg-black/20 backdrop-blur-sm rounded-lg px-4 py-2">
         <button
+          type="button"
           onClick={(e) => {
             e.stopPropagation();
             onHome();
@@ -55,7 +58,7 @@ export function SlideContainer({
 
       {/* Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 bg-gray-700 z-10">
-        <div 
+        <div
           className="h-full bg-blue-500 transition-all duration-300"
           style={{ width: `${(currentSlide / totalSlides) * 100}%` }}
         />
@@ -63,9 +66,7 @@ export function SlideContainer({
 
       {/* Main Content */}
       <main className="flex-1 flex items-center justify-center p-8">
-        <div className="max-w-6xl w-full text-center">
-          {slide.component}
-        </div>
+        <div className="max-w-6xl w-full text-center">{slide.component}</div>
       </main>
 
       {/* Navigation Hints */}
@@ -78,7 +79,6 @@ export function SlideContainer({
           <span>ESC 홈</span>
         </div>
       </div>
-
     </div>
   );
 }
