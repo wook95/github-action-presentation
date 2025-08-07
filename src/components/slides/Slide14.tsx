@@ -1,23 +1,27 @@
-import gemini from "@/assets/images/4-pr.png";
-import Image from "next/image";
+import gemini from '@/assets/images/4-pr.png';
+import Image from 'next/image';
+import GradientText from '../ui/GradientText';
 
 export function Slide14() {
   return (
     <div className="flex items-center justify-center h-full space-x-16">
       <div className="flex-1">
-        <Image
-          src={gemini}
-          alt="PR 리뷰 자동화 이미지"
-          width={1666}
-          height={450}
-          className="w-full h-auto"
-          priority
-        />
+        <Image src={gemini} alt="PR 리뷰 자동화 이미지" width={1666} height={450} className="w-full h-auto" priority />
       </div>
 
       <div className="flex-1 space-y-6">
         <h1 className="text-5xl font-bold text-white mb-8">
-          <span className="text-blue-400">Gemini</span>를 이용한
+          <div className="flex items-center justify-center">
+            <GradientText
+              colors={['#40ffaa', '#4079ff', '#40ffaa', '#4079ff', '#40ffaa']}
+              animationSpeed={3}
+              showBorder={false}
+              className="m-1!"
+            >
+              Gemini
+            </GradientText>
+            를 이용한
+          </div>
           <br />
           PR 리뷰 자동화
         </h1>

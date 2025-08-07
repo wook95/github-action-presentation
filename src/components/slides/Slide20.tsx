@@ -6,7 +6,7 @@ export function Slide20() {
       </div>
 
       <div className="absolute bottom-20 right-20">
-        <p className="text-lg text-gray-400">발표자 이욱창</p>
+        <p className="text-lg text-gray-400">이욱창</p>
       </div>
     </div>
   );
