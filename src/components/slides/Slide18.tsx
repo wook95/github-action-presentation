@@ -1,32 +1,40 @@
+import gemini from '@/assets/images/4-pr.png';
+import Image from 'next/image';
+import GradientText from '../ui/GradientText';
+
 export function Slide18() {
   return (
-    <div className="flex flex-col justify-center h-full space-y-8 px-8">
-      <div className="space-y-6">
-        <div className="space-y-4">
-          <h3 className="text-2xl font-bold text-blue-400">1.</h3>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            깃헙 액션을 로컬에서 실행하고 싶다는 욕구를 느껴보셨나요?
-            <br />
-            <span className="text-white font-semibold">(act, docker)</span>
-          </p>
-        </div>
+    <div className="flex items-center justify-center h-full space-x-16">
+      <div className="flex-1">
+        <Image src={gemini} alt="PR 리뷰 자동화 이미지" width={1666} height={450} className="w-full h-auto" priority />
+      </div>
 
-        <div className="space-y-4">
-          <h3 className="text-2xl font-bold text-green-400">2.</h3>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            이미 만들어진 멋진 액션들을 보고 싶진 않나요?
-            <br />
-            <span className="text-white font-semibold">(26.5k의 스타를 받은 저장소가 준비되어있습니다)</span>
-          </p>
-        </div>
+      <div className="flex-1 space-y-6">
+        <h1 className="text-5xl font-bold text-white mb-8">
+          <div className="flex items-center justify-center">
+            <GradientText
+              colors={['#40ffaa', '#4079ff', '#40ffaa', '#4079ff', '#40ffaa']}
+              animationSpeed={3}
+              showBorder={false}
+              className="m-1!"
+            >
+              Gemini
+            </GradientText>
+            를 이용한
+          </div>
+          <br />
+          PR 리뷰 자동화
+        </h1>
 
-        <div className="space-y-4">
-          <h3 className="text-2xl font-bold text-yellow-400">3.</h3>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            깃헙 클라우드 컴퓨터 말고 직접 aws의 컴퓨터에서 작업을 실행시키고 싶으신가요?
-            <br />
-            <span className="text-white font-semibold">(커스텀 러너)</span>
-          </p>
+        <div className="space-y-4 text-xl text-gray-300">
+          <div className="flex items-center space-x-3">
+            <span className="text-green-400">•</span>
+            <span>prompt를 이용한 최적화 리뷰</span>
+          </div>
+          <div className="flex items-center space-x-3">
+            <span className="text-green-400">•</span>
+            <span>diff의 크기가 너무 클 경우 요약모드로 진행</span>
+          </div>
         </div>
       </div>
     </div>

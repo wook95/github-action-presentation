@@ -1,42 +1,45 @@
 export function Slide10() {
   return (
     <div className="flex flex-col items-center justify-center h-full space-y-12">
-      <h1 className="text-6xl font-bold text-white mb-8">크롤링 자동화</h1>
+      <h1 className="text-6xl font-bold text-white mb-8">토스 페이먼츠</h1>
 
-      <div className="grid grid-cols-2 gap-12 max-w-5xl">
-        <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-blue-400">데이터 수집</h2>
-          <ul className="space-y-3 text-xl text-gray-300">
-            <li>• 경쟁사 가격 모니터링</li>
-            <li>• 시장 동향 분석</li>
-            <li>• 뉴스 및 트렌드 수집</li>
-          </ul>
-        </div>
+      <div className="max-w-5xl mx-auto text-white space-y-8">
+        <div className="text-center space-y-8">
+          <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 p-8 rounded-lg">
+            <h2 className="text-4xl font-bold mb-4 text-blue-300">핵심 철학</h2>
+            <p className="text-2xl">피드백 속도 + PR 코멘트 대화의 양</p>
+          </div>
 
-        <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-green-400">자동화 효과</h2>
-          <ul className="space-y-3 text-xl text-gray-300">
-            <li>• 24/7 모니터링</li>
-            <li>• 실시간 알림</li>
-            <li>• 데이터 정확성 향상</li>
-          </ul>
-        </div>
+          <h3 className="text-3xl font-bold mt-8 mb-6">3가지 핵심 문제</h3>
 
-        {/* <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-yellow-400">사례</h2>
-          <ul className="space-y-3 text-xl text-gray-300">
-            <li>• E-commerce 가격 추적</li>
-            <li>• SNS 브랜드 모니터링</li>
-          </ul>
-        </div> */}
+          <div className="grid grid-cols-1 gap-6">
+            <div className="bg-red-900/30 p-6 rounded-lg text-left">
+              <div className="flex items-center">
+                <div className="w-3 h-3 bg-red-500 rounded-full mr-4"></div>
+                <span className="text-xl">
+                  <span className="font-bold text-red-300">리뷰어 할당이 수동적</span> → 느린 피드백
+                </span>
+              </div>
+            </div>
 
-        <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-purple-400">도구</h2>
-          <ul className="space-y-3 text-xl text-gray-300">
-            <li>• Puppeteer</li>
-            <li>• Selenium</li>
-            <li>• BeautifulSoup</li>
-          </ul>
+            <div className="bg-orange-900/30 p-6 rounded-lg text-left">
+              <div className="flex items-center">
+                <div className="w-3 h-3 bg-orange-500 rounded-full mr-4"></div>
+                <span className="text-xl">
+                  <span className="font-bold text-orange-300">이메일 알림</span> → 확인 지연
+                </span>
+              </div>
+            </div>
+
+            <div className="bg-yellow-900/30 p-6 rounded-lg text-left">
+              <div className="flex items-center">
+                <div className="w-3 h-3 bg-yellow-500 rounded-full mr-4"></div>
+                <span className="text-xl">
+                  <span className="font-bold text-yellow-300">당일 미리뷰</span> → 누락 발생
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

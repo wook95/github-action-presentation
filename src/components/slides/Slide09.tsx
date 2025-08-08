@@ -1,54 +1,38 @@
-import security from '@/assets/images/3-security.jpeg';
-import Image from 'next/image';
-import DecryptedText from '../ui/DecryptedText';
+import CountUp from '../ui/CountUp';
 
 export function Slide09() {
   return (
-    <div className="flex items-center justify-center h-full space-x-16">
-      <div className="flex-1">
-        <Image src={security} alt="보안 자동화 이미지" width={1666} height={450} className="w-full h-auto" priority />
-      </div>
+    <div className="flex flex-col items-center justify-center h-full space-y-12">
+      <h1 className="text-5xl font-bold text-white mb-12">네이버의 성과</h1>
 
-      <div className="flex-1 space-y-6">
-        <h1 className="text-5xl font-bold text-white mb-8">
-          {/* 보안 자동화 */}
-          <DecryptedText text="보안 자동화" animateOn="view" revealDirection="start" sequential={true} speed={250} />
-        </h1>
-
-        <div className="space-y-4 text-xl text-gray-300">
-          <div className="flex items-center space-x-3">
-            <span className="text-green-400">✓</span>
-
-            <DecryptedText
-              text="SCA (Software Composition Analysis)"
-              animateOn="view"
-              revealDirection="start"
-              sequential={true}
-              speed={60}
-            />
+      <div className="grid grid-cols-2 gap-16 max-w-4xl">
+        <div className="text-center space-y-4">
+          <div className="text-6xl font-bold text-blue-400">
+            <CountUp from={0} to={53} separator="," direction="up" duration={1} className="count-up-text" />%
           </div>
-          <div className="flex items-center space-x-3">
-            <span className="text-green-400">✓</span>
 
-            <DecryptedText
-              text="SAST (Static Application Security Testing)"
-              animateOn="view"
-              revealDirection="start"
-              sequential={true}
-              speed={60}
-            />
-          </div>
-          <div className="flex items-center space-x-3">
-            <span className="text-green-400">✓</span>
+          <p className="text-2xl text-gray-300">리뷰 응답 시간 단축</p>
+        </div>
 
-            <DecryptedText
-              text="Container, Iac 스캐닝"
-              animateOn="view"
-              revealDirection="start"
-              sequential={true}
-              speed={60}
-            />
+        <div className="text-center space-y-4">
+          <div className="text-6xl font-bold text-green-400">
+            <CountUp from={0} to={48} separator="," direction="up" duration={1} className="count-up-text" />%
           </div>
+          <p className="text-2xl text-gray-300">merge 소요 시간 감소</p>
+        </div>
+
+        <div className="text-center space-y-4">
+          <div className="text-6xl font-bold text-yellow-400">
+            <CountUp from={0} to={15} separator="," direction="up" duration={1} className="count-up-text" />%
+          </div>
+          <p className="text-2xl text-gray-300">3일 내 merge 비율 증가</p>
+        </div>
+
+        <div className="text-center space-y-4">
+          <div className="text-6xl font-bold text-purple-400">
+            <CountUp from={0} to={62} separator="," direction="up" duration={1} className="count-up-text" />%
+          </div>
+          <p className="text-2xl text-gray-300">리뷰 참여율 증가</p>
         </div>
       </div>
     </div>
