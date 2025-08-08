@@ -1,26 +1,40 @@
+import { motion } from 'framer-motion';
+
 export function Slide14() {
   return (
     <div className="flex flex-col items-center justify-center h-full space-y-12">
       <h1 className="text-6xl font-bold text-white mb-8">크롤링 자동화</h1>
 
       <div className="grid grid-cols-2 gap-12 max-w-5xl">
-        <div className="space-y-6">
+        <motion.div
+          className="space-y-6"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.0 }}
+        >
           <h2 className="text-3xl font-bold text-blue-400">데이터 수집</h2>
           <ul className="space-y-3 text-xl text-gray-300">
             <li>• 경쟁사 가격 모니터링</li>
             <li>• 시장 동향 분석</li>
             <li>• 뉴스 및 트렌드 수집</li>
           </ul>
-        </div>
+        </motion.div>
 
-        <div className="space-y-6">
+        <motion.div
+          className="space-y-6"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
           <h2 className="text-3xl font-bold text-green-400">자동화 효과</h2>
           <ul className="space-y-3 text-xl text-gray-300">
             <li>• 24/7 모니터링</li>
             <li>• 실시간 알림</li>
             <li>• 데이터 정확성 향상</li>
           </ul>
-        </div>
+        </motion.div>
 
         {/* <div className="space-y-6">
           <h2 className="text-3xl font-bold text-yellow-400">사례</h2>
@@ -30,14 +44,20 @@ export function Slide14() {
           </ul>
         </div> */}
 
-        <div className="space-y-6">
+        <motion.div
+          className="space-y-6"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <h2 className="text-3xl font-bold text-purple-400">도구</h2>
           <ul className="space-y-3 text-xl text-gray-300">
             <li>• Puppeteer</li>
             <li>• Selenium</li>
             <li>• BeautifulSoup</li>
           </ul>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

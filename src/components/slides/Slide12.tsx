@@ -1,3 +1,5 @@
+import CountUp from '@/components/ui/CountUp';
+
 export function Slide12() {
   return (
     <div className="flex flex-col items-center justify-center h-full space-y-12">
@@ -18,25 +20,12 @@ export function Slide12() {
               </div>
               <div className="text-center">
                 <h3 className="text-2xl font-bold mb-2 text-purple-300">운영 이슈</h3>
-                <p className="text-xl">90% 감소</p>
+                <p className="text-xl">
+                  <CountUp from={0} to={90} duration={1.1} className="inline-block" />% 감소
+                </p>
               </div>
             </div>
           </div>
-          {/* 
-          <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 p-8 rounded-lg">
-            <h2 className="text-4xl font-bold mb-6 text-purple-300 text-center">vs 네이버</h2>
-            <div className="flex justify-center items-center space-x-8">
-              <div className="text-center">
-                <h3 className="text-2xl font-bold mb-2 text-orange-300">네이버</h3>
-                <p className="text-xl">리뷰어 할당</p>
-              </div>
-              <div className="text-4xl font-bold text-white">VS</div>
-              <div className="text-center">
-                <h3 className="text-2xl font-bold mb-2 text-cyan-300">토스</h3>
-                <p className="text-xl">프로세스 전반 최적화</p>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

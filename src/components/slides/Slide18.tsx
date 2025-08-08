@@ -1,6 +1,7 @@
 import gemini from '@/assets/images/4-pr.png';
 import Image from 'next/image';
 import GradientText from '../ui/GradientText';
+import { motion } from 'framer-motion';
 
 export function Slide18() {
   return (
@@ -27,14 +28,26 @@ export function Slide18() {
         </h1>
 
         <div className="space-y-4 text-xl text-gray-300">
-          <div className="flex items-center space-x-3">
+          <motion.div
+            className="flex items-center space-x-3"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.0 }}
+          >
             <span className="text-green-400">•</span>
             <span>prompt를 이용한 최적화 리뷰</span>
-          </div>
-          <div className="flex items-center space-x-3">
+          </motion.div>
+          <motion.div
+            className="flex items-center space-x-3"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
             <span className="text-green-400">•</span>
             <span>diff의 크기가 너무 클 경우 요약모드로 진행</span>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

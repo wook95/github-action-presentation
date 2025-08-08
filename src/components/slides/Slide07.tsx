@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 export function Slide07() {
   return (
     <div className="flex flex-col items-center justify-center h-full space-y-12">
@@ -8,7 +10,13 @@ export function Slide07() {
           <h2 className="text-4xl font-bold mb-8">3가지 핵심 전략</h2>
 
           <div className="space-y-6">
-            <div className="bg-blue-900/30 p-8 rounded-lg text-left">
+            <motion.div
+              className="bg-blue-900/30 p-8 rounded-lg text-left"
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.0 }}
+            >
               <div className="flex items-center mb-4">
                 <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
                   1
@@ -16,9 +24,15 @@ export function Slide07() {
                 <h3 className="text-3xl font-bold text-blue-300">리뷰 응답 시간 개선</h3>
               </div>
               <p className="text-xl ml-12">알림 자동화</p>
-            </div>
+            </motion.div>
 
-            <div className="bg-green-900/30 p-8 rounded-lg text-left">
+            <motion.div
+              className="bg-green-900/30 p-8 rounded-lg text-left"
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
               <div className="flex items-center mb-4">
                 <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
                   2
@@ -26,9 +40,15 @@ export function Slide07() {
                 <h3 className="text-3xl font-bold text-green-300">PR 데드라인 관리</h3>
               </div>
               <p className="text-xl ml-12">D-day 시스템</p>
-            </div>
+            </motion.div>
 
-            <div className="bg-purple-900/30 p-8 rounded-lg text-left">
+            <motion.div
+              className="bg-purple-900/30 p-8 rounded-lg text-left"
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               <div className="flex items-center mb-4">
                 <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
                   3
@@ -36,7 +56,7 @@ export function Slide07() {
                 <h3 className="text-3xl font-bold text-purple-300">리뷰 참여율 향상</h3>
               </div>
               <p className="text-xl ml-12">대용량 PR 관리</p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

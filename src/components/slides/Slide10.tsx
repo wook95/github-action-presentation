@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 export function Slide10() {
   return (
     <div className="flex flex-col items-center justify-center h-full space-y-12">
@@ -13,32 +15,50 @@ export function Slide10() {
           <h3 className="text-3xl font-bold mt-8 mb-6">3가지 핵심 문제</h3>
 
           <div className="grid grid-cols-1 gap-6">
-            <div className="bg-red-900/30 p-6 rounded-lg text-left">
+            <motion.div
+              className="bg-red-900/30 p-6 rounded-lg text-left"
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.0 }}
+            >
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-red-500 rounded-full mr-4"></div>
                 <span className="text-xl">
                   <span className="font-bold text-red-300">리뷰어 할당이 수동적</span> → 느린 피드백
                 </span>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="bg-orange-900/30 p-6 rounded-lg text-left">
+            <motion.div
+              className="bg-orange-900/30 p-6 rounded-lg text-left"
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-orange-500 rounded-full mr-4"></div>
                 <span className="text-xl">
                   <span className="font-bold text-orange-300">이메일 알림</span> → 확인 지연
                 </span>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="bg-yellow-900/30 p-6 rounded-lg text-left">
+            <motion.div
+              className="bg-yellow-900/30 p-6 rounded-lg text-left"
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-yellow-500 rounded-full mr-4"></div>
                 <span className="text-xl">
                   <span className="font-bold text-yellow-300">당일 미리뷰</span> → 누락 발생
                 </span>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
